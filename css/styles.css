@@ -139,6 +139,7 @@ nav a {
   background-color: var(--lightblue);
   display: grid;
   padding: 2rem;
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: 650px) {
