@@ -1,13 +1,13 @@
-let container = document.querySelector(".container");
-let form = document.querySelector("form");
-console.log(form);
+let containerContact = document.querySelector(".container-contact");
+let formContact = document.querySelector("#form-contact");
+console.log("form contact before function", formContact);
 
-form.addEventListener("submit", onSubmit);
+formContact.addEventListener("submit", onSubmitContact);
 
-function onSubmit(e) {
+function onSubmitContact(e) {
   e.preventDefault();
 
-  const data = new FormData(form);
+  const data = new FormData(e.target);
   const dataObject = Object.fromEntries(data.entries());
 
   console.log("our data:", dataObject);
@@ -19,78 +19,78 @@ function onSubmit(e) {
   let coffeeFlavor = dataObject.coffeeflavor;
   let coffeeOrEmployment = dataObject.which;
 
-  let namePara = document.createElement("p");
-  namePara.textContent = name;
-  console.log("name", namePara);
-  container.appendChild(namePara);
-  // console.log("changed text content", namePara);
-  console.log("added paragraph to div", container);
+  // // let namePara = document.createElement("p");
+  // namePara.textContent = name;
+  // console.log("name", namePara);
+  // containerContact.appendChild(namePara);
+  // // console.log("changed text content", namePara);
+  // console.log("added paragraph to div", containerContact);
 
-  let emailPara = document.createElement("p");
-  emailPara.textContent = email;
-  container.appendChild(emailPara);
-  // console.log("changed text content", emailPara);
-  console.log("added paragraph to div", container);
+  // let emailPara = document.createElement("p");
+  // emailPara.textContent = email;
+  // containerContact.appendChild(emailPara);
+  // // console.log("changed text content", emailPara);
+  // console.log("added paragraph to div", containerContact);
 
-  let commentsPara = document.createElement("p");
-  commentsPara.textContent = comments;
-  container.appendChild(commentsPara);
+  // let commentsPara = document.createElement("p");
+  // commentsPara.textContent = comments;
+  // containerContact.appendChild(commentsPara);
 
-  let coffeeFlavorPara = document.createElement("p");
-  coffeeFlavorPara.textContent = coffeeFlavor;
-  container.appendChild(coffeeFlavorPara);
+  // let coffeeFlavorPara = document.createElement("p");
+  // coffeeFlavorPara.textContent = coffeeFlavor;
+  // containerContact.appendChild(coffeeFlavorPara);
 
-  let coffeeOrEmploymentPara = document.createElement("p");
-  coffeeOrEmploymentPara.textContent = coffeeOrEmployment;
-  container.appendChild(coffeeOrEmploymentPara);
-  // console.log("changed text content", coffeeOrEmployment);
+  // let coffeeOrEmploymentPara = document.createElement("p");
+  // coffeeOrEmploymentPara.textContent = coffeeOrEmployment;
+  // containerContact.appendChild(coffeeOrEmploymentPara);
+  // // console.log("changed text content", coffeeOrEmployment);
 
-  let thankYouMessage = `Thank You!`;
+  let thankYouMessage = `Thank You! ${name}. You are logged in!`;
   console.log("Data Results", thankYouMessage);
   let thankYouMessagePara = document.createElement("p");
   thankYouMessagePara.textContent = thankYouMessage;
-  container.appendChild(thankYouMessagePara);
+  containerContact.appendChild(thankYouMessagePara);
 }
 
-let container = document.querySelector(".container");
-let form = document.querySelector("form");
-console.log(form);
+// let containerCart = document.querySelector(".container-cart");
+// let formCart = document.querySelector("#form-cart");
+// console.log("cart page before function", formCart);
 
-form.addEventListener("submit", onSubmit);
+// formCart.addEventListener("submit", onSubmitCart);
 
-function onSubmit(e) {
-  e.preventDefault();
+// function onSubmitCart(e) {
+//   e.preventDefault();
 
-  const data = new FormData(form);
-  const dataObject = Object.fromEntries(data.entries());
+//   const data = new FormData(e.target);
+//   const dataObject = Object.fromEntries(data.entries());
 
-  console.log("our data:", dataObject);
+//   console.log("our data:", dataObject);
 
-  let name = dataObject.name;
-  let email = dataObject.email;
-  let password = dataObject.password;
+//   let name = dataObject.name;
+//   let email = dataObject.email;
+//   let password = dataObject.password;
 
-  let namePara = document.createElement("p");
-  namePara.textContent = name;
-  console.log("name", namePara);
-  container.appendChild(namePara);
-  // console.log("changed text content", namePara);
-  console.log("added paragraph to div", container);
+//   // let namePara = document.createElement("p");
+//   // namePara.textContent = name;
+//   // console.log("name", namePara);
+//   // containerCart.appendChild(namePara);
+//   // // console.log("changed text content", namePara);
+//   // console.log("added paragraph to div", container);
 
-  let emailPara = document.createElement("p");
-  emailPara.textContent = email;
-  container.appendChild(emailPara);
-  // console.log("changed text content", emailPara);
-  console.log("added paragraph to div", container);
+//   // let emailPara = document.createElement("p");
+//   // emailPara.textContent = email;
+//   // containerCart.appendChild(emailPara);
+//   // // console.log("changed text content", emailPara);
+//   // console.log("added paragraph to div", container);
 
-  let passwordPara = document.createElement("p");
-  passwordPara.textContent = password;
-  container.appendChild(passwordPara);
-  console.log("added paragraph to div", container);
+//   // let passwordPara = document.createElement("p");
+//   // passwordPara.textContent = password;
+//   // containerCart.appendChild(passwordPara);
+//   // console.log("added paragraph to div", container);
 
-  let loginMessage = `Welcome, ${name}! You are logged in!`;
-  console.log("Data Results", loginMessage);
-  let loginMessagePara = document.createElement("p");
-  loginMessagePara.textContent = loginMessage;
-  container.appendChild(loginMessagePara);
-}
+//   let loginMessage = `Welcome, ${name}! You are logged in!`;
+//   console.log("Data Results", loginMessage);
+//   let loginMessagePara = document.createElement("p");
+//   loginMessagePara.textContent = loginMessage;
+//   containerCart.appendChild(loginMessagePara);
+// }

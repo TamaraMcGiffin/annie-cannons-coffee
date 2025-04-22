@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <v class="wrapper">
+    <div class="wrapper">
       <header>
         <div>
-        <a
-          ><img
-            src="images/cannons-coffee-logo.webp"
-            alt="Cannons Coffee, Beans of Joy! Est. 2014"
-        /></a>
-        <h1>Cannons Coffee</h1>
+          <a
+            ><img
+              src="images/cannons-coffee-logo.webp"
+              alt="Cannons Coffee, Beans of Joy! Est. 2014"
+          /></a>
+          <h1>Cannons Coffee</h1>
         </div>
         <nav>
           <ul>
@@ -27,47 +27,49 @@
               >
             </li>
             <li>
-              <a href="contact.html" target="_blank"
-                >Contact</a
-              >
+              <a href="contact.html" target="_blank">Contact</a>
             </li>
-             <li><a href="cart.html" target="_blank">Cart</a></li>
+            <li><a href="cart.html" target="_blank">Cart</a></li>
           </ul>
         </nav>
       </header>
-      <main>  
-        <h2> Contact Cannons Coffee </h2>
-     <form id="form">
+      <main>
+        <h2>Contact Cannons Coffee</h2>
+        <form id="form-contact">
+          <!-- Name -->
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" required /><br /><br />
+          <!-- Email   -->
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+          <label for="phone">Phone: </label><br />
+          <input type="number" id="phone" name="phone" required /><br /><br />
+          <label for="comments">Comments?</label><br />
+          <textarea id="comments" name="comments" rows="4" cols="40"></textarea
+          ><br /><br />
 
-  <!-- Name -->
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name" required><br><br>
-  <!-- Email   -->
-  <label for="email">Email:</label><br>
-  <input type="email" id="email" name="email" required><br><br>
-  <label for="phone">Phone: </label><br>
-  <input type="number" id="phone" name="phone" required /><br><br>
-  <label for="comments">Comments?</label><br>
-  <textarea id="comments" name="comments" rows="4" cols="40"></textarea><br><br>
+          <label for="coffeeflavor">Favorite Coffee Flavor:</label><br />
+          <select id="coffeeflavor" name="coffeeflavor">
+            <option value="whitemocha">White Mocha</option>
+            <option value="hazelnut">Hazelnut</option>
+            <option value="caramel">Caramel</option>
+            <option value="maplepecan">Maple Pecan</option>
+            <option value="lavendervanilla">Lavender Vanilla</option></select
+          ><br /><br />
 
-  <label for="coffeeflavor">Favorite Coffee Flavor:</label><br>
-  <select id="coffeeflavor" name="coffeeflavor">
-    <option value="whitemocha">White Mocha</option>
-    <option value="hazelnut">Hazelnut</option>
-    <option value="caramel">Caramel</option>
-    <option value="maplepecan">Maple Pecan</option>
-    <option value="lavendervanilla">Lavender Vanilla</option>
-  </select><br><br>
+          <label
+            ><input type="radio" name="which" value="coffee" /> Buying Coffee? </label
+          ><br />
+          <label
+            ><input type="radio" name="which" value="employment" />Seeking
+            Employment?</label
+          ><br /><br />
+          <button type="submit">Submit</button>
+        </form>
 
-  <label><input type="radio" name="which" value="coffee"> Buying Coffee? </label><br>
-  <label><input type="radio" name="which" value="employment">Seeking Employment?</label><br><br>
-  <button type="submit">Submit</button>
+        <div class="container-contact"></div>
+      </main>
 
-</form>
-
-<div class="container"></div>
-    </main>
-   
       <footer>
         <a
           ><img
@@ -80,7 +82,6 @@
         <p>&copy; 2014 Cannons Coffee. All Rights Reserved.</p>
       </footer>
     </div>
-        <script src="js/custom.js"></script>
-
+    <script src="js/custom.js"></script>
   </body>
 </html>
